@@ -34,7 +34,11 @@ module RailsAdmin
         end
 
         def serial?
-          property.primary
+          if property.respond_to?(:primary)
+            property.primary
+          else
+            property.name == model.primary_key
+          end
         end
 
         def association?
