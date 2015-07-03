@@ -4,7 +4,7 @@ case ENV['RAILS_VERSION']
 when '4.0'
   gem 'rails', '~> 4.0.0'
 else
-  gem 'rails', '~> 4.1'
+  gem 'rails', '~> 4.2.3'
 end
 
 case ENV['CI_ORM']
